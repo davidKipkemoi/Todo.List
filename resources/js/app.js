@@ -8,7 +8,7 @@ import { faSquarePlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 library.add(faSquarePlus, faTrash)
-createApp().component('font-awesome-icon',FontAwesomeIcon)
+createApp.component('font-awesome-icon',FontAwesomeIcon)
 
 
 const app = createApp({

@@ -3,6 +3,7 @@
     <input type ="text" v-model="item.name"/>
     <font-awesome-icon
         icon ="plus-square"
+        @click="addItem()"
         :class="[item.name ? 'active' :'inactive', 'plus']" />
 </div>
 </template>

@@ -10,6 +10,7 @@
 <script>
 import addItemForm from './addItemForm'
 import ListView from './ListView'
+
 export default{
     components:{
         addItemForm,
