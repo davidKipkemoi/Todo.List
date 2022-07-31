@@ -8,8 +8,8 @@
 </div>
 </template>
 <script>
-import addItemForm from './addItemForm'
-import ListView from './ListView'
+import addItemForm from '.resources/addItemForm'
+import ListView from '.resources/ListView'
 
 export default{
     components:{

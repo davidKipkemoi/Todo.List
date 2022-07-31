@@ -1,10 +1,7 @@
 <template>
 <div class ="addItem">
     <input type ="text" v-model="item.name"/>
-    <font-awesome-icon
-        :icon ="plus-square"
-        @click="addItem()"
-        :class="[item.name ? 'active' :'inactive', 'plus']" />
+    <font-awesome-icon />
 </div>
 </template>
 <script>
