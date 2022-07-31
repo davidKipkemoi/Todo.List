@@ -8,8 +8,8 @@
 </div>
 </template>
 <script>
-import addItemForm from '.resources/addItemForm'
-import ListView from '.resources/ListView'
+import addItemForm from '.resources/addItemForm.vue'
+import ListView from '.resources/ListView.vue'
 
 export default{
     components:{

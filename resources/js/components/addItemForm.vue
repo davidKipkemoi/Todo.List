@@ -1,7 +1,8 @@
 <template>
 <div class ="addItem">
-    <input type ="text" v-model="item.name"/>
-    <font-awesome-icon />
+    <input type ="text" v-model="item.name" />
+    <keep-alive></keep-alive>
+
 </div>
 </template>
 <script>
