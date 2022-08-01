@@ -1,8 +1,7 @@
 <template>
 <div class ="addItem">
     <input type ="text" v-model="item.name" />
-    <keep-alive></keep-alive>
-
+    <font-awesome-icon icon="fab fa-accusoft" />
 </div>
 </template>
 <script>
