@@ -1,11 +1,13 @@
 <template>
 <div class ="addItem">
-    <input type="text"/>
-
-    <font-awesome-icon
-        :icon ="faPlusSquare"
+    <input type="text" v-model="item.name"/>
+    <button
         @click="addItem()"
-        :class="[item.name ? 'active' :'inactive', 'plus']"/>
+        :class="[item.name ? 'active' :'inactive']"
+
+    >
+        Add List
+    </button>
 
 
 </div>
@@ -13,12 +15,33 @@
 <script>
 
 
+
+
 export default{
     data: function (){
         return {
         item:{
                 name:""
+
             }
+        }
+    },
+    methods:{
+        addItem(){
+            if(this.item.name ==""){
+                return;
+            }
+            axios.post('api.item.store',{
+                item:this.item
+            })
+            .then(response=> {
+                if(response.status==201){
+                    this.item.name=="";
+                }
+            })
+            .catch(error=>{
+                console.log(error);
+            })
         }
     }
 
@@ -28,23 +51,11 @@ export default{
 </script>
 <style scoped>
 .addItem{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.input{
-    background: rgb(0, 255, 13);
-    border:0px ;
-    outline: none;
-    padding: 5px ;
-    margin-right:10px ;
-    width: 100%;
-
+    display: flex;
 }
 .plus{
     font-size: 50px;
-    color: black;
+    color: rgb(255, 0, 0);
 }
 .active{
     color: rgb(226, 226, 12);
@@ -52,6 +63,8 @@ export default{
 .inactive{
     color: rgb(62, 38, 221);
 }
+
+
 
 </style>
 
