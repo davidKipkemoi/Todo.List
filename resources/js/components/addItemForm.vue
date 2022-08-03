@@ -1,10 +1,18 @@
 <template>
 <div class ="addItem">
-    <input type ="text" v-model="item.name" />
-    <font-awesome-icon icon="fab fa-accusoft" />
+    <input type="text"/>
+
+    <font-awesome-icon
+        :icon ="faPlusSquare"
+        @click="addItem()"
+        :class="[item.name ? 'active' :'inactive', 'plus']"/>
+
+
 </div>
 </template>
 <script>
+
+
 export default{
     data: function (){
         return {
@@ -26,7 +34,7 @@ export default{
 
 }
 .input{
-    background: white;
+    background: rgb(0, 255, 13);
     border:0px ;
     outline: none;
     padding: 5px ;
@@ -35,13 +43,14 @@ export default{
 
 }
 .plus{
-    font-size: 20px;
+    font-size: 50px;
+    color: black;
 }
 .active{
     color: rgb(226, 226, 12);
 }
 .inactive{
-    color: rgb(255, 0, 0);
+    color: rgb(62, 38, 221);
 }
 
 </style>

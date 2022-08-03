@@ -1,15 +1,15 @@
 <template>
 <div class="todolistContainer">
     <div class="heading">
-        <h2 id="title"> Todo List</h2>
+        <h2 id="title"> Add Your Way!!!!</h2>
         <add-item-form/>
     </div>
     <list-view/>
 </div>
 </template>
 <script>
-import addItemForm from '.resources/addItemForm.vue'
-import ListView from '.resources/ListView.vue'
+import addItemForm from './addItemForm.vue'
+import ListView from './ListView.vue'
 
 export default{
     components:{
@@ -24,7 +24,7 @@ width: 350px;
 margin: auto;
 }
 .heading{
-    background: rgb(255, 0, 0);
+    background: rgb(18, 17, 17);
     padding: 10px;
 }
 #title{
