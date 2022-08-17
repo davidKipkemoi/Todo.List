@@ -2,9 +2,11 @@
 <div class="todolistContainer">
     <div class="heading">
         <h2 id="title"> TodoList Project</h2>
-        <add-item-form/>
+        <add-item-form v-on:reloadList="getlist()"
+        />
     </div>
-    <list-view :items="items"/>
+    <list-view :items="items" v-on:reloadList="getlist()"
+    />
 </div>
 </template>
 <script>

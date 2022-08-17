@@ -34,7 +34,8 @@ export default{
             })
             .then(response=> {
                 if(response.status==201){
-                    this.item.name=="";
+                    this.item.name=""
+                    this.$emit('reloadList');
                 }
             })
             .catch(error=>{
@@ -59,7 +60,7 @@ export default{
     color: rgb(255, 0, 0);
 }
 .inactive{
-    color: rgba(221, 255, 0, 0.53);
+    color: rgb(255, 254, 254);
 }
 
 

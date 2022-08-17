@@ -3,6 +3,9 @@ require('./bootstrap');
 import {createApp} from 'vue'
 import TodoList from './components/TodoList'
 import addItemForm from './components/addItemForm.vue'
+import ListView from './components/ListView.vue'
+import ListItem from './components/ListItem.vue'
+
 
 
 
@@ -11,7 +14,7 @@ import { faPlusSquare, faTrash} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 library.add(faPlusSquare, faTrash)
-createApp(TodoList,addItemForm).component('font-awesome-icon',FontAwesomeIcon)
+createApp(TodoList,addItemForm,ListItem,ListView).component('font-awesome-icon',FontAwesomeIcon)
 
 const app = createApp({
 
