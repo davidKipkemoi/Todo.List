@@ -4,10 +4,11 @@
         <h2 id="title"> TodoList Project</h2>
         <add-item-form/>
     </div>
-    <list-view/>
+    <list-view :items="items"/>
 </div>
 </template>
 <script>
+import axios from 'axios'
 import addItemForm from './addItemForm.vue'
 import ListView from './ListView.vue'
 
@@ -15,6 +16,25 @@ export default{
     components:{
         addItemForm,
         ListView
+    },
+    data: function (){
+        return{
+            items:[]
+        }
+    },
+    methods:{
+        getlist(){
+            axios.get('api/items')
+            .then(response =>{
+                this.items=response.data
+            })
+            .catch(error=>{
+                console.log(error);
+            })
+        }
+    },
+    created(){
+        this.getlist();
     }
 }
 </script>

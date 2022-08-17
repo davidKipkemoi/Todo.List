@@ -3,9 +3,7 @@
     <input type="text" v-model="item.name"/>
     <button
         @click="addItem()"
-        :class="[item.name ? 'active' :'inactive']"
-
-    >
+        :class="[item.name ? 'active' :'inactive']">
         Add List
     </button>
 
@@ -31,7 +29,7 @@ export default{
             if(this.item.name ==""){
                 return;
             }
-            axios.post('api.item.store',{
+            axios.post('api/item/store',{
                 item:this.item
             })
             .then(response=> {
@@ -58,10 +56,10 @@ export default{
     color: rgb(255, 0, 0);
 }
 .active{
-    color: rgb(226, 226, 12);
+    color: rgb(255, 0, 0);
 }
 .inactive{
-    color: rgb(62, 38, 221);
+    color: rgba(221, 255, 0, 0.53);
 }
 
 
