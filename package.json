@@ -1,29 +1,36 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production"
-    },
-    "devDependencies": {
-        "@vue/compiler-sfc": "^3.2.36",
-        "axios": "^0.21",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14",
-        "vue-loader": "^16.8.3",
-        "webpack": "^5.73.0"
-    },
-    "dependencies": {
-        "@fortawesome/fontawesome-svg-core": "^6.1.2",
-        "@fortawesome/free-brands-svg-icons": "^6.1.2",
-        "@fortawesome/free-regular-svg-icons": "^6.1.2",
-        "@fortawesome/free-solid-svg-icons": "^6.1.2",
-        "@fortawesome/vue-fontawesome": "^3.0.1",
-        "vue": "^3.2.36"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "hot": "mix watch --hot",
+    "make:component": "vue-cli-service make:component",
+    "make:directive": "vue-cli-service make:directive",
+    "make:layout": "vue-cli-service make:layout",
+    "make:mixin": "vue-cli-service make:mixin",
+    "make:view": "vue-cli-service make:view",
+    "prod": "npm run production",
+    "production": "mix --production",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-brands-svg-icons": "^6.1.2",
+    "@fortawesome/free-regular-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/vue-fontawesome": "^3.0.1",
+    "vue": "^3.2.36"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.2.36",
+    "axios": "^0.21",
+    "laravel-mix": "^6.0.6",
+    "lodash": "^4.17.19",
+    "pluralize": "^8.0.0",
+    "postcss": "^8.1.14",
+    "vue-cli-plugin-vuetify-cli": "~0.2.4",
+    "vue-loader": "^16.8.3",
+    "webpack": "^5.73.0"
+  }
 }
