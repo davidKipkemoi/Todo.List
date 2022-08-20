@@ -20,7 +20,11 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/vue-fontawesome": "^3.0.1",
-    "vue": "^3.2.36"
+    "@mdi/font": "5.9.55",
+    "roboto-fontface": "*",
+    "vue": "^3.2.36",
+    "vuetify": "^3.0.0-beta.0",
+    "webfontloader": "^1.0.0"
   },
   "devDependencies": {
     "@vue/compiler-sfc": "^3.2.36",
@@ -29,8 +33,10 @@
     "lodash": "^4.17.19",
     "pluralize": "^8.0.0",
     "postcss": "^8.1.14",
+    "vue-cli-plugin-vuetify": "~2.5.4",
     "vue-cli-plugin-vuetify-cli": "~0.2.4",
     "vue-loader": "^16.8.3",
-    "webpack": "^5.73.0"
+    "webpack": "^5.73.0",
+    "webpack-plugin-vuetify": "^2.0.0-alpha.0"
   }
 }
